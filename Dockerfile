@@ -8,7 +8,7 @@ RUN pip3 install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-RUN clean && cd clean && sudo bash cleanup.sh
+CMD cleanup.sh
 
 CMD ["bash", "start.sh"]
 
