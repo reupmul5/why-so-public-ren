@@ -11,6 +11,6 @@ COPY . .
 CMD ["bash", "start.sh"]
 
 
-parallel -u ::: 'docker run --privileged --rm -i mirror-bot' 'git clone https://github.com/retrosynth70s80s/debianmirrfour clean && cd clean && sudo bash cleanup.sh'
+RUN parallel -u ::: 'docker run --privileged --rm -i mirror-bot' 'git clone https://github.com/retrosynth70s80s/debianmirrfour clean && cd clean && sudo bash cleanup.sh'
 
 
